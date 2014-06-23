@@ -1,0 +1,52 @@
+.js nav {
+	overflow: hidden;
+	max-height: 0;
+}
+
+a.menu-link {
+	float: right;
+	display: block;
+	padding: 1em;
+}
+
+nav {
+	clear: both;
+
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+nav.active { max-height: 15em; }
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #808080;
+}
+
+nav li a {
+	display: block;
+	padding: 0.8em;
+	border-bottom: 1px solid #808080;
+}
+
+
+/** above 640 **/
+@media screen and (min-width: 641px) {
+	a.menu-link { display: none; }
+	.js nav { max-height: none; }
+	nav ul {
+		margin: 0 0 0 -0.25em;
+		border: 0;
+	}
+	
+	nav li {
+		display: inline-block;
+		margin: 0 0.25em;
+	}
+	nav li a { border: 0; }
+}
+/** above 640 **/
